@@ -1,0 +1,37 @@
+# docker compose up --build      ->  API on http://localhost:8000 (docs at /docs), MySQL inside the stack
+services:
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: afcm
+      MYSQL_USER: afcm
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-afcm}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-change-me-root}
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-p${MYSQL_ROOT_PASSWORD:-change-me-root}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  api:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: mysql+pymysql://afcm:${MYSQL_PASSWORD:-afcm}@db:3306/afcm?charset=utf8mb4
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models:ro   # food_classifier.onnx, labels.json, ... from ml/train.py
+
+volumes:
+  mysql_data:

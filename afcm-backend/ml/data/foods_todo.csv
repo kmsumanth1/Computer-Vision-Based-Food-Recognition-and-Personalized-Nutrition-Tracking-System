@@ -1,0 +1,79 @@
+id,name,calories,reference_weight_g,aliases,protein_g,carbs_g,fat_g,fiber_g,sugar_g,saturated_fat_g,sodium_mg,cholesterol_mg,kind
+aloo-gobi,Aloo Gobi,,100,,,,,,,,,,food
+aloo-methi,Aloo Methi,,100,,,,,,,,,,food
+aloo-mutter,Aloo Mutter,,100,,,,,,,,,,food
+aloo-paratha,Aloo Paratha,,100,,,,,,,,,,food
+amritsari-kulcha,Amritsari Kulcha,,100,,,,,,,,,,food
+anda-curry,Anda Curry,,100,,,,,,,,,,food
+balushahi,Balushahi,,100,,,,,,,,,,food
+banana-chips,Banana Chips,,100,,,,,,,,,,food
+besan-laddu,Besan Laddu,,100,,,,,,,,,,food
+bhindi-masala,Bhindi Masala,,100,,,,,,,,,,food
+biryani,Biryani,,100,,,,,,,,,,food
+boondi-laddu,Boondi Laddu,,100,,,,,,,,,,food
+chaas,Chaas,,100,,,,,,,,,,food
+chana-masala,Chana Masala,,100,,,,,,,,,,food
+chicken-pizza,Chicken Pizza,,100,,,,,,,,,,food
+chicken-wings,Chicken Wings,,100,,,,,,,,,,food
+chikki,Chikki,,100,,,,,,,,,,food
+chivda,Chivda,,100,,,,,,,,,,food
+chole-bhature,Chole Bhature,,100,,,,,,,,,,food
+dabeli,Dabeli,,100,,,,,,,,,,food
+dal-khichdi,Dal Khichdi,,100,,,,,,,,,,food
+dhokla,Dhokla,,100,,,,,,,,,,food
+falooda,Falooda,,100,,,,,,,,,,food
+fish-curry,Fish Curry,,100,,,,,,,,,,food
+gajar-ka-halwa,Gajar Ka Halwa,,100,,,,,,,,,,food
+garlic-bread,Garlic Bread,,100,,,,,,,,,,food
+garlic-naan,Garlic Naan,,100,,,,,,,,,,food
+ghevar,Ghevar,,100,,,,,,,,,,food
+grilled-sandwich,Grilled Sandwich,,100,,,,,,,,,,food
+gujhia,Gujhia,,100,,,,,,,,,,food
+gulab-jamun,Gulab Jamun,,100,,,,,,,,,,food
+hara-bhara-kabab,Hara Bhara Kabab,,100,,,,,,,,,,food
+idiyappam,Idiyappam,,100,,,,,,,,,,food
+jalebi,Jalebi,,100,,,,,,,,,,food
+kaju-katli,Kaju Katli,,100,,,,,,,,,,food
+khakhra,Khakhra,,100,,,,,,,,,,food
+kheer,Kheer,,100,,,,,,,,,,food
+kulfi,Kulfi,,100,,,,,,,,,,food
+margherita-pizza,Margherita Pizza,,100,,,,,,,,,,food
+masala-dosa,Masala Dosa,,100,,,,,,,,,,food
+masala-papad,Masala Papad,,100,,,,,,,,,,food
+medu-vada,Medu Vada,,100,,,,,,,,,,food
+misal-pav,Misal Pav,,100,,,,,,,,,,food
+modak,Modak,,100,,,,,,,,,,food
+moong-dal-halwa,Moong Dal Halwa,,100,,,,,,,,,,food
+murukku,Murukku,,100,,,,,,,,,,food
+mysore-pak,Mysore Pak,,100,,,,,,,,,,food
+navratan-korma,Navratan Korma,,100,,,,,,,,,,food
+neer-dosa,Neer Dosa,,100,,,,,,,,,,food
+onion-pakoda,Onion Pakoda,,100,,,,,,,,,,food
+palak-paneer,Palak Paneer,,100,,,,,,,,,,food
+paneer-masala,Paneer Masala,,100,,,,,,,,,,food
+paneer-pizza,Paneer Pizza,,100,,,,,,,,,,food
+pani-puri,Pani Puri,,100,,,,,,,,,,food
+paniyaram,Paniyaram,,100,,,,,,,,,,food
+papdi-chaat,Papdi Chaat,,100,,,,,,,,,,food
+patrode,Patrode,,100,,,,,,,,,,food
+pav-bhaji,Pav Bhaji,,100,,,,,,,,,,food
+pepperoni-pizza,Pepperoni Pizza,,100,,,,,,,,,,food
+phirni,Phirni,,100,,,,,,,,,,food
+poha,Poha,,100,,,,,,,,,,food
+pongal,Pongal,,100,,,,,,,,,,food
+puri-bhaji,Puri Bhaji,,100,,,,,,,,,,food
+rajma-chawal,Rajma Chawal,,100,,,,,,,,,,food
+rasgulla,Rasgulla,,100,,,,,,,,,,food
+rava-dosa,Rava Dosa,,100,,,,,,,,,,food
+sabudana-khichdi,Sabudana Khichdi,,100,,,,,,,,,,food
+sabudana-vada,Sabudana Vada,,100,,,,,,,,,,food
+samosa,Samosa,,100,,,,,,,,,,food
+seekh-kebab,Seekh Kebab,,100,,,,,,,,,,food
+set-dosa,Set Dosa,,100,,,,,,,,,,food
+sev-puri,Sev Puri,,100,,,,,,,,,,food
+solkadhi,Solkadhi,,100,,,,,,,,,,food
+steamed-momo,Steamed Momo,,100,,,,,,,,,,food
+thali,Thali,,100,,,,,,,,,,food
+thukpa,Thukpa,,100,,,,,,,,,,food
+uttapam,Uttapam,,100,,,,,,,,,,food
+vada-pav,Vada Pav,,100,,,,,,,,,,food

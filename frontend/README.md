@@ -1,16 +1,40 @@
-# React + Vite
+# AI Food Calories Meter (frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React + TypeScript + Vite + Tailwind CSS. Frontend only, built to connect to a FastAPI backend.
 
-Currently, two official plugins are available:
+## Run it
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm run build      # type-checks, then builds to dist/
+```
 
-## React Compiler
+Environment (`.env`, see `.env.example`):
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Variable | Meaning |
+| --- | --- |
+| `VITE_API_URL` | Base URL of the FastAPI backend, e.g. `http://localhost:8000` |
+| `VITE_USE_MOCK` | `true` uses the in-browser mock backend (no server needed). Set `false` to call the real API. |
 
-## Expanding the Oxlint configuration
+With the mock on, sign up with any email. Handy demo triggers for the mock:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Upload an image whose filename contains `unknown` to see "food not recognized", or `lowconf` to see the low-confidence warning.
+- Barcodes starting with `000` return "not found". Any other 6 to 14 digit number returns a product.
+
+## Connecting the real backend
+
+1. Set `VITE_USE_MOCK=false` and `VITE_API_URL` to your server.
+2. Everything the UI sends and receives is typed in `src/types/` and called from `src/services/`.
+   Endpoints: `POST /auth/register|login|forgot-password`, `POST /profile/setup`, `GET|PUT /profile`,
+   `POST /nutrition/calculate`, `GET /dashboard`, `POST /food/analyze|calculate-weight|barcode`,
+   `POST|GET|PUT|DELETE /meals`, `GET /history`, `POST|GET /water`.
+3. Errors: the UI reads FastAPI's `detail` as a string, a validation array, or `{ code, message }`
+   (`src/utils/apiError.ts`). Codes with friendly copy: `FOOD_NOT_RECOGNIZED`, `BARCODE_NOT_FOUND`,
+   `INVALID_CREDENTIALS`, `EMAIL_EXISTS`, `NUTRITION_UNAVAILABLE`, `INVALID_WEIGHT`, `INVALID_IMAGE`.
+4. A `401` on any non-auth call logs the user out. `GET /profile` returning `404` means profile setup isn't done yet.
+5. `src/mocks/` is only loaded when `VITE_USE_MOCK=true` and is never imported by components or pages.
+   Delete it when you no longer need it.
+
+The frontend never calculates calories or nutrition. Targets, food nutrition and weight changes all come from the backend.
+Camera and barcode scanning need HTTPS (or localhost).

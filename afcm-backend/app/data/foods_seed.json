@@ -1,0 +1,400 @@
+{
+  "_note": "Approximate placeholder values so the app works out of the box. Replace or extend with a real nutrition dataset (see README: importing foods).",
+  "foods": [
+    {
+      "id": "chicken-breast",
+      "name": "Chicken breast (grilled)",
+      "kind": "food",
+      "aliases": [
+        "chicken",
+        "chicken breast",
+        "grilled chicken"
+      ],
+      "reference_weight_g": 200.0,
+      "per_100g": {
+        "calories": 165.0,
+        "protein_g": 31.0,
+        "carbs_g": 0.0,
+        "fat_g": 3.6,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 74.0,
+        "saturated_fat_g": 1.0,
+        "cholesterol_mg": 85.0
+      }
+    },
+    {
+      "id": "egg-boiled",
+      "name": "Boiled egg",
+      "kind": "food",
+      "aliases": [
+        "egg",
+        "eggs",
+        "boiled egg",
+        "boiled eggs"
+      ],
+      "reference_weight_g": 100.0,
+      "per_100g": {
+        "calories": 155.0,
+        "protein_g": 12.6,
+        "carbs_g": 1.1,
+        "fat_g": 10.6,
+        "fiber_g": 0.0,
+        "sugar_g": 1.1,
+        "sodium_mg": 124.0,
+        "saturated_fat_g": 3.3,
+        "cholesterol_mg": 373.0
+      }
+    },
+    {
+      "id": "rice-cooked",
+      "name": "White rice (cooked)",
+      "kind": "food",
+      "aliases": [
+        "rice",
+        "white rice",
+        "steamed rice"
+      ],
+      "reference_weight_g": 200.0,
+      "per_100g": {
+        "calories": 130.0,
+        "protein_g": 2.7,
+        "carbs_g": 28.0,
+        "fat_g": 0.3,
+        "fiber_g": 0.4,
+        "sugar_g": 0.1,
+        "sodium_mg": 1.0,
+        "saturated_fat_g": 0.1,
+        "cholesterol_mg": 0.0
+      }
+    },
+    {
+      "id": "paneer",
+      "name": "Paneer",
+      "kind": "food",
+      "aliases": [
+        "paneer",
+        "cottage cheese",
+        "paneer cubes"
+      ],
+      "reference_weight_g": 100.0,
+      "per_100g": {
+        "calories": 296.0,
+        "protein_g": 18.3,
+        "carbs_g": 3.6,
+        "fat_g": 22.8,
+        "fiber_g": 0.0,
+        "sugar_g": 2.6,
+        "sodium_mg": 20.0,
+        "saturated_fat_g": 14.0,
+        "cholesterol_mg": 60.0
+      }
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "kind": "food",
+      "aliases": [
+        "banana",
+        "bananas"
+      ],
+      "reference_weight_g": 118.0,
+      "per_100g": {
+        "calories": 89.0,
+        "protein_g": 1.1,
+        "carbs_g": 22.8,
+        "fat_g": 0.3,
+        "fiber_g": 2.6,
+        "sugar_g": 12.2,
+        "sodium_mg": 1.0,
+        "saturated_fat_g": 0.1,
+        "cholesterol_mg": 0.0
+      }
+    },
+    {
+      "id": "milk-whole",
+      "name": "Whole milk",
+      "kind": "food",
+      "aliases": [
+        "milk",
+        "whole milk",
+        "glass of milk"
+      ],
+      "reference_weight_g": 250.0,
+      "per_100g": {
+        "calories": 61.0,
+        "protein_g": 3.2,
+        "carbs_g": 4.8,
+        "fat_g": 3.3,
+        "fiber_g": 0.0,
+        "sugar_g": 5.1,
+        "sodium_mg": 43.0,
+        "saturated_fat_g": 1.9,
+        "cholesterol_mg": 10.0
+      }
+    },
+    {
+      "id": "dal",
+      "name": "Dal (cooked lentils)",
+      "kind": "food",
+      "aliases": [
+        "dal",
+        "dhal",
+        "lentils",
+        "lentil curry"
+      ],
+      "reference_weight_g": 200.0,
+      "per_100g": {
+        "calories": 116.0,
+        "protein_g": 9.0,
+        "carbs_g": 20.0,
+        "fat_g": 0.4,
+        "fiber_g": 7.9,
+        "sugar_g": 1.8,
+        "sodium_mg": 2.0,
+        "saturated_fat_g": 0.1,
+        "cholesterol_mg": 0.0
+      }
+    },
+    {
+      "id": "chapati",
+      "name": "Chapati",
+      "kind": "food",
+      "aliases": [
+        "chapati",
+        "roti",
+        "phulka"
+      ],
+      "reference_weight_g": 40.0,
+      "per_100g": {
+        "calories": 297.0,
+        "protein_g": 9.6,
+        "carbs_g": 50.0,
+        "fat_g": 7.5,
+        "fiber_g": 4.9,
+        "sugar_g": 1.5,
+        "sodium_mg": 250.0,
+        "saturated_fat_g": 2.6,
+        "cholesterol_mg": 0.0
+      }
+    },
+    {
+      "id": "idli",
+      "name": "Idli",
+      "kind": "food",
+      "aliases": [
+        "idli",
+        "idly"
+      ],
+      "reference_weight_g": 120.0,
+      "per_100g": {
+        "calories": 132.0,
+        "protein_g": 4.0,
+        "carbs_g": 27.0,
+        "fat_g": 0.4,
+        "fiber_g": 1.2,
+        "sugar_g": 0.6,
+        "sodium_mg": 190.0,
+        "saturated_fat_g": 0.1,
+        "cholesterol_mg": 0.0
+      }
+    },
+    {
+      "id": "oatmeal",
+      "name": "Oatmeal (cooked)",
+      "kind": "food",
+      "aliases": [
+        "oats",
+        "oatmeal",
+        "porridge"
+      ],
+      "reference_weight_g": 250.0,
+      "per_100g": {
+        "calories": 71.0,
+        "protein_g": 2.5,
+        "carbs_g": 12.0,
+        "fat_g": 1.5,
+        "fiber_g": 1.7,
+        "sugar_g": 0.3,
+        "sodium_mg": 49.0,
+        "saturated_fat_g": 0.3,
+        "cholesterol_mg": 0.0
+      }
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "kind": "food",
+      "aliases": [
+        "apple",
+        "apples"
+      ],
+      "reference_weight_g": 180.0,
+      "per_100g": {
+        "calories": 52.0,
+        "protein_g": 0.3,
+        "carbs_g": 13.8,
+        "fat_g": 0.2,
+        "fiber_g": 2.4,
+        "sugar_g": 10.4,
+        "sodium_mg": 1.0,
+        "saturated_fat_g": 0.0,
+        "cholesterol_mg": 0.0
+      }
+    },
+    {
+      "id": "salmon",
+      "name": "Salmon (baked)",
+      "kind": "food",
+      "aliases": [
+        "salmon",
+        "fish",
+        "baked salmon"
+      ],
+      "reference_weight_g": 150.0,
+      "per_100g": {
+        "calories": 208.0,
+        "protein_g": 20.0,
+        "carbs_g": 0.0,
+        "fat_g": 13.0,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 59.0,
+        "saturated_fat_g": 3.1,
+        "cholesterol_mg": 55.0
+      }
+    },
+    {
+      "id": "bread-whole-wheat",
+      "name": "Whole wheat bread",
+      "kind": "food",
+      "aliases": [
+        "bread",
+        "toast",
+        "whole wheat bread",
+        "brown bread"
+      ],
+      "reference_weight_g": 60.0,
+      "per_100g": {
+        "calories": 247.0,
+        "protein_g": 13.0,
+        "carbs_g": 41.0,
+        "fat_g": 3.4,
+        "fiber_g": 7.0,
+        "sugar_g": 6.0,
+        "sodium_mg": 450.0,
+        "saturated_fat_g": 0.7,
+        "cholesterol_mg": 0.0
+      }
+    },
+    {
+      "id": "yogurt-greek",
+      "name": "Greek yogurt",
+      "kind": "food",
+      "aliases": [
+        "yogurt",
+        "yoghurt",
+        "greek yogurt",
+        "curd",
+        "dahi"
+      ],
+      "reference_weight_g": 170.0,
+      "per_100g": {
+        "calories": 97.0,
+        "protein_g": 9.0,
+        "carbs_g": 3.9,
+        "fat_g": 5.0,
+        "fiber_g": 0.0,
+        "sugar_g": 3.6,
+        "sodium_mg": 35.0,
+        "saturated_fat_g": 3.2,
+        "cholesterol_mg": 13.0
+      }
+    },
+    {
+      "id": "almonds",
+      "name": "Almonds",
+      "kind": "food",
+      "aliases": [
+        "almond",
+        "almonds",
+        "nuts"
+      ],
+      "reference_weight_g": 30.0,
+      "per_100g": {
+        "calories": 579.0,
+        "protein_g": 21.0,
+        "carbs_g": 22.0,
+        "fat_g": 50.0,
+        "fiber_g": 12.5,
+        "sugar_g": 4.4,
+        "sodium_mg": 1.0,
+        "saturated_fat_g": 3.8,
+        "cholesterol_mg": 0.0
+      }
+    },
+    {
+      "id": "prod-protein-bar",
+      "name": "Cocoa Protein Bar",
+      "kind": "product",
+      "brand": "Northfield",
+      "barcode": "8901234500011",
+      "serving_size_label": "1 bar (45 g)",
+      "aliases": [],
+      "reference_weight_g": 45.0,
+      "per_100g": {
+        "calories": 390.0,
+        "protein_g": 33.0,
+        "carbs_g": 38.0,
+        "fat_g": 12.0,
+        "fiber_g": 8.0,
+        "sugar_g": 5.0,
+        "sodium_mg": 220.0,
+        "saturated_fat_g": 5.0,
+        "cholesterol_mg": 15.0
+      }
+    },
+    {
+      "id": "prod-peanut-butter",
+      "name": "Crunchy Peanut Butter",
+      "kind": "product",
+      "brand": "Harvest Table",
+      "barcode": "8901234500028",
+      "serving_size_label": "2 tbsp (32 g)",
+      "aliases": [],
+      "reference_weight_g": 32.0,
+      "per_100g": {
+        "calories": 598.0,
+        "protein_g": 25.0,
+        "carbs_g": 20.0,
+        "fat_g": 50.0,
+        "fiber_g": 6.0,
+        "sugar_g": 9.0,
+        "sodium_mg": 430.0,
+        "saturated_fat_g": 10.0,
+        "cholesterol_mg": 0.0
+      }
+    },
+    {
+      "id": "prod-whole-grain-cereal",
+      "name": "Whole Grain Cereal",
+      "kind": "product",
+      "brand": "PureCrunch",
+      "barcode": "8901234500035",
+      "serving_size_label": "1 cup (30 g)",
+      "aliases": [],
+      "reference_weight_g": 30.0,
+      "per_100g": {
+        "calories": 375.0,
+        "protein_g": 8.0,
+        "carbs_g": 80.0,
+        "fat_g": 2.0,
+        "fiber_g": 9.0,
+        "sugar_g": 20.0,
+        "sodium_mg": 500.0,
+        "saturated_fat_g": 0.5,
+        "cholesterol_mg": 0.0
+      }
+    }
+  ]
+}

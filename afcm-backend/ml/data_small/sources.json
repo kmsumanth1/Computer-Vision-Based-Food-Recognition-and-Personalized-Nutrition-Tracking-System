@@ -1,0 +1,11 @@
+{
+  "khana": {
+    "source": "C:\\Users\\yaswa\\Downloads\\dataset\\khana",
+    "layout": "one folder per class",
+    "classes": 80,
+    "train_images": 1600,
+    "val_images": 160,
+    "prepared_at": "2026-09-19 14:15:38",
+    "licence_note": "Check this dataset's licence before using a model trained on it in a product."
+  }
+}

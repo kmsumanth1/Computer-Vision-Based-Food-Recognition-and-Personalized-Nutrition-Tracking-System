@@ -1,0 +1,3 @@
+id,name,calories,reference_weight_g,aliases,protein_g,carbs_g,fat_g,fiber_g,sugar_g,saturated_fat_g,sodium_mg,cholesterol_mg,kind,brand,barcode,serving_size_label
+masala-dosa,Masala dosa,168,180,dosa|masala dosai,3.9,25,6,1.5,1,1.2,300,0,food,,,
+sample-cereal,Sample Cereal,375,30,,8,80,2,9,20,0.5,500,0,product,ExampleCo,8900000000017,1 cup (30 g)

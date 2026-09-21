@@ -1,0 +1,8 @@
+# Only needed on the machine you train on (a GPU helps a lot, but CPU works for small datasets).
+# For an NVIDIA GPU, install torch/torchvision with the command from https://pytorch.org/get-started/locally/ first.
+torch>=2.3
+torchvision>=0.18
+onnx>=1.16
+onnxruntime>=1.18
+pillow>=10.3
+numpy>=1.26
