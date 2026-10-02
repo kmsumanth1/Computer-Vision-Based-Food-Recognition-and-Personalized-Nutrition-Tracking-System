@@ -1,4 +1,7 @@
+import csv
 import logging
+import time
+from pathlib import Path
 
 from fastapi import APIRouter, Depends, File, UploadFile
 from sqlalchemy.orm import Session
@@ -37,7 +40,18 @@ def analyze(image: UploadFile | None = File(default=None), _user: User = Depends
     if len(data) > limit:
         raise AppError(413, "INVALID_IMAGE", f"That image is larger than {settings.max_image_size_mb} MB.")
 
+    start = time.perf_counter()
     predictions = recognizer.predict(decode_image(data))
+    elapsed_ms = (time.perf_counter() - start) * 1000
+
+    timing_file = Path("image_processing_times.csv")
+    is_new = not timing_file.exists()
+    with open(timing_file, "a", newline="") as f:
+        writer = csv.writer(f)
+        if is_new:
+            writer.writerow(["elapsed_ms"])
+        writer.writerow([f"{elapsed_ms:.4f}"])
+
     confident = [p for p in predictions if p.confidence >= settings.recognition_min_confidence]
     if not confident:
         raise AppError(422, "FOOD_NOT_RECOGNIZED", "We couldn't recognise any food in this photo.")

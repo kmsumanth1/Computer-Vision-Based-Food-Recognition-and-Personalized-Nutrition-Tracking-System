@@ -75,3 +75,6 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+@app.get("/ping")
+async def ping():
+    return {"status": "ok"}

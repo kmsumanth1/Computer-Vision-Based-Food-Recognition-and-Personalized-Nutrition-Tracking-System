@@ -1,2 +1,2 @@
 id,name,calories,reference_weight_g,aliases,protein_g,carbs_g,fat_g,fiber_g,sugar_g,saturated_fat_g,sodium_mg,cholesterol_mg,kind
-egg-fried,Egg Fried,,100,,,,,,,,,,food
+egg-fried,Fried egg (omelette),169.856,60,omelette|omlet,16.53,0,11.6,0,0,3.179,169,316,food

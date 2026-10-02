@@ -7,5 +7,32 @@
     "val_images": 2440,
     "prepared_at": "2026-09-19 13:54:35",
     "licence_note": "Check this dataset's licence before using a model trained on it in a product."
+  },
+  "fruits360": {
+    "source": "C:\\Users\\yaswa\\Downloads\\archive\\fruits-360_100x100",
+    "layout": "split folders (train/ and Test/)",
+    "classes": 85,
+    "train_images": 24394,
+    "val_images": 2805,
+    "prepared_at": "2026-09-27 13:27:35",
+    "licence_note": "Check this dataset's licence before using a model trained on it in a product."
+  },
+  "realnuts": {
+    "source": "C:\\Users\\yaswa\\Downloads\\Nuts\\Nuts",
+    "layout": "split folders (train/ and val/)",
+    "classes": 11,
+    "train_images": 1320,
+    "val_images": 440,
+    "prepared_at": "2026-10-02 09:43:55",
+    "licence_note": "Check this dataset's licence before using a model trained on it in a product."
+  },
+  "food11-egg": {
+    "source": "C:\\Users\\yaswa\\Downloads\\evaluation",
+    "layout": "one folder per class",
+    "classes": 1,
+    "train_images": 305,
+    "val_images": 30,
+    "prepared_at": "2026-10-02 10:07:55",
+    "licence_note": "Check this dataset's licence before using a model trained on it in a product."
   }
 }

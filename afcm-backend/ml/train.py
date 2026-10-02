@@ -34,6 +34,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--no-pretrained", action="store_true", help="train from scratch (needs far more data)")
     p.add_argument("--label-map", type=Path, help="JSON {class folder: food id}; copied next to the model")
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument("--resume", action="store_true", help="continue from out-dir/checkpoint.pt if it exists")
+    p.add_argument("--checkpoint-every", type=int, default=1, help="save a resumable checkpoint every N epochs (0 disables)")
     return p.parse_args()
 
 
@@ -49,6 +51,7 @@ def main() -> int:
 
     torch.manual_seed(args.seed)
     import os
+
     forced = os.environ.get("AFCM_DEVICE")  # e.g. set AFCM_DEVICE=cpu to force the CPU for a speed comparison
     if forced:
         device = torch.device(forced)
@@ -86,7 +89,32 @@ def main() -> int:
         train_set = datasets.ImageFolder(train_dir, train_tf)
         val_set = datasets.ImageFolder(val_dir, eval_tf)
         if train_set.classes != val_set.classes:
-            sys.exit("train/ and val/ must contain the same class folders.")
+            # A class can end up with zero images on one side after a small dataset's random split
+            # (ml.prepare_dataset always tries for at least one validation image, but a class with very
+            # few source photos can still miss). Align both datasets onto one shared class list instead
+            # of crashing: a class missing from val/ just isn't scored, but it still trains normally.
+            missing_val = sorted(set(train_set.classes) - set(val_set.classes))
+            missing_train = sorted(set(val_set.classes) - set(train_set.classes))
+            if missing_train:
+                sys.exit(
+                    f"{len(missing_train)} class(es) have images in val/ but none in train/, so the model "
+                    f"could never learn them: {', '.join(missing_train[:10])}"
+                    + (" ..." if len(missing_train) > 10 else "")
+                    + ". Add more photos for these classes, or remove them from ml/data, then try again."
+                )
+            print(
+                f"Note: {len(missing_val)} class(es) have too few photos for any validation images, "
+                f"so their accuracy can't be measured this run: {', '.join(missing_val[:10])}"
+                + (" ..." if len(missing_val) > 10 else "")
+            )
+            union = sorted(set(train_set.classes) | set(val_set.classes))
+            new_index = {c: i for i, c in enumerate(union)}
+            for ds in (train_set, val_set):
+                old_classes = ds.classes
+                ds.samples = [(path, new_index[old_classes[old_idx]]) for path, old_idx in ds.samples]
+                ds.targets = [t for _, t in ds.samples]
+                ds.classes = union
+                ds.class_to_idx = new_index
     else:
         full_train = datasets.ImageFolder(train_dir, train_tf)
         full_eval = datasets.ImageFolder(train_dir, eval_tf)
@@ -151,10 +179,35 @@ def main() -> int:
                     per_class[y][0] += int(y == y_hat)
         return correct1 / total, correct5 / total, per_class
 
-    best_acc, best_state, best_epoch = -1.0, None, 0
+    args.out_dir.mkdir(parents=True, exist_ok=True)
+    checkpoint_path = args.out_dir / "checkpoint.pt"
+    best_acc, best_state, best_epoch, start_epoch = -1.0, None, 0, 1
     freeze = min(args.freeze_epochs, args.epochs)
-    for epoch in range(1, args.epochs + 1):
-        if epoch == 1 or epoch == freeze + 1:
+    optimizer = scheduler = None  # set below, either fresh or restored from the checkpoint
+
+    if args.resume and checkpoint_path.is_file():
+        checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+        if checkpoint.get("classes") != classes:
+            sys.exit(
+                f"{checkpoint_path} was trained on different classes than {args.data_dir}. "
+                "Use a different --out-dir, or drop --resume to start over."
+            )
+        model.load_state_dict(checkpoint["model_state"])
+        best_acc, best_state, best_epoch = checkpoint["best_acc"], checkpoint["best_state"], checkpoint["best_epoch"]
+        start_epoch = checkpoint["epoch"] + 1
+        backbone_at_resume = start_epoch > freeze
+        set_backbone_trainable(backbone_at_resume)
+        optimizer, scheduler = make_optimizer(args.epochs - start_epoch + 1 if backbone_at_resume else freeze - start_epoch + 1, backbone_at_resume)
+        optimizer.load_state_dict(checkpoint["optimizer_state"])
+        scheduler.load_state_dict(checkpoint["scheduler_state"])
+        print(f"Resuming from {checkpoint_path}: epoch {start_epoch}/{args.epochs} (best so far: epoch {best_epoch}, top-1 {best_acc:.1%})")
+        if start_epoch > args.epochs:
+            print("This checkpoint already finished every epoch. Re-running the export step only.")
+
+    for epoch in range(start_epoch, args.epochs + 1):
+        if epoch == start_epoch and optimizer is not None:
+            pass  # optimizer/scheduler already restored from the checkpoint above
+        elif epoch == start_epoch or epoch == freeze + 1:
             backbone = epoch > freeze
             set_backbone_trainable(backbone)
             optimizer, scheduler = make_optimizer(args.epochs - epoch + 1 if backbone else freeze, backbone)
@@ -180,15 +233,30 @@ def main() -> int:
             best_acc, best_epoch = top1, epoch
             best_state = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
 
+        if args.checkpoint_every and (epoch % args.checkpoint_every == 0 or epoch == args.epochs):
+            torch.save(
+                {
+                    "epoch": epoch,
+                    "classes": classes,
+                    "model_state": model.state_dict(),
+                    "optimizer_state": optimizer.state_dict(),
+                    "scheduler_state": scheduler.state_dict(),
+                    "best_acc": best_acc,
+                    "best_epoch": best_epoch,
+                    "best_state": best_state,
+                },
+                checkpoint_path,
+            )
+            print(f"  (checkpoint saved: {checkpoint_path})")
+
     assert best_state is not None
     model.load_state_dict(best_state)
     top1, top5, per_class = evaluate()
     print(f"\nBest epoch {best_epoch}: top-1 {top1:.1%}, top-5 {top5:.1%}")
-    weakest = sorted(((c[0] / c[1] if c[1] else 0.0, classes[i], c[1]) for i, c in per_class.items()))[:5]
+    weakest = sorted(((c[0] / c[1], classes[i], c[1]) for i, c in per_class.items() if c[1] > 0))[:5]
     print("Weakest classes:", ", ".join(f"{name} {acc:.0%} (n={n})" for acc, name, n in weakest))
 
     # ---- export ----
-    args.out_dir.mkdir(parents=True, exist_ok=True)
     onnx_path = args.out_dir / "food_classifier.onnx"
     model.eval().cpu()
     dummy = torch.randn(1, 3, size, size)
@@ -237,6 +305,7 @@ def main() -> int:
         (args.out_dir / "label_map.json").write_text(args.label_map.read_text(encoding="utf-8"), encoding="utf-8")
 
     print(f"\nSaved to {args.out_dir}/. Start the API with AI_PROVIDER=onnx to use it.")
+    checkpoint_path.unlink(missing_ok=True)  # training finished; the checkpoint is no longer needed
     return 0
 
 

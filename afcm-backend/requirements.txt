@@ -21,6 +21,7 @@ argon2-cffi>=23.1
 
 # Image handling + inference (runs the trained model exported as ONNX)
 pillow>=10.3
+openpyxl>=3.1
 numpy>=1.26
 onnxruntime>=1.18
 

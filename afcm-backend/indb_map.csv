@@ -1,0 +1,79 @@
+id,recipe_code,name,reference_weight_g,aliases,matched
+aloo-methi,ASC175,Aloo Methi,100,,Potato fenugreek (Aloo methi)
+aloo-paratha,ASC098,Aloo Paratha,100,,Potato parantha/paratha (Aloo ka parantha/paratha)
+anda-curry,BFP240,Anda Curry,100,egg curry,Egg curry (Anda curry)
+apricot,BFP372,Apricot,100,,Apricot fool
+banana-chips,OSR119,Banana Chips,100,,Banana chips (Kele ke chips)
+bean-pod,OSR079,Bean Pod,100,green beans,Sauteed radishes with green beans
+beetroot,BFP116,Beetroot,100,beet,Beetroot poori (Chukandar ki poori)
+biryani,ASC123,Biryani,100,chicken biryani|veg biryani,CHOOSE ONE (see list below)
+blueberry,OSR046,Blueberry,100,,Peach blueberry preserves
+cabbage-white,OSR058,Cabbage White,100,cabbage,Pickled cabbage 
+caju-seed,ASC339,Cashew Nut,100,caju seed,Cashewnut burfi (Kaju burfi/Kaju katli)
+carambola,OSR048,Carambola,100,star fruit,Starfruit preserves 
+carrot,BFP079,Carrot,100,,Cream of carrot soup
+cauliflower,BFP282,Cauliflower,100,,Cauliflower basket
+chaas,OSR032,Chaas,100,buttermilk,Buttermilk biscuit
+cherimoya,ASC330,Cherimoya,100,custard apple,Stewed apple with custard
+cherry,BFP360,Cherry,100,,Hot cherry sauce
+chikki,BFP569,Chikki,100,peanut chikki,Soya chikki
+chivda,ASC367,Chivda,100,,Flattened rice cutlet (Chirwa cutlet/Chivda cutlet/Poha cutlet)
+cocos,ASC432,Coconut,100,coconut|cocos,Coconut finger
+corn,OSR133,Corn,100,sweet corn,Sweet corn soup
+corn-husk,OSR133,Corn,100,,Sweet corn soup
+cucumber,BFP088,Cucumber,100,,Cold cucumber cream soup 
+dal-khichdi,BFP554,Dal Khichdi,100,,Rice dal porridge (Chawal dal ki khichdi/khichri)
+dates,OSR085,Dates,100,,Dates chutney (Khajoor ki chutney)
+dhokla,ASC474,Dhokla,100,,Dhokla
+eggplant,BFP132,Eggplant,100,brinjal,Eggplant/Brinjal rice (Vangi bhat)
+fish-curry,ASC246,Fish Curry,100,,CHOOSE ONE (see list below)
+gajar-ka-halwa,ASC295,Gajar Ka Halwa,100,carrot halwa,Carrot halwa (Gajar ka halwa)
+garlic-bulb,OSR138,Garlic,100,garlic,Garlic soup
+ginger,BFP220,Ginger,100,,Ginger chicken
+gooseberry,BFP445,Gooseberry,100,,Gooseberry chutney (Amla chutney)
+grape,BFP361,Grape,100,,Grape and orange whip
+grilled-sandwich,BFP456,Grilled Sandwich,100,,Tomato sandwich (grilled)
+guava,ASC502,Guava,100,,Guava jelly (Amrood ki jelly)
+gulab-jamun,ASC348,Gulab Jamun,100,,Gulab Jamun with khoya
+hazelnut,OSR040,Hazelnut,100,,Hazelnut cookies
+kaju-katli,ASC339,Kaju Katli,100,,Cashewnut burfi (Kaju burfi/Kaju katli)
+khakhra,OSR102,Khakhra,100,,Khakhra
+kheer,ASC287,Kheer,100,,Paneer kheer
+kiwi,OSR018,Kiwi,100,,Kiwi granola pudding
+kulfi,ASC321,Kulfi,100,,Kulfi
+lemon,ASC008,Lemon,100,,Lemonade
+mango,ASC316,Mango,100,,Mango mousse
+masala-dosa,ASC146,Masala Dosa,100,,Masala dosa
+medu-vada,BFP436,Medu Vada,100,,Plain urad dal vada (Uzunne vada/Minapa garelu/Ulundu vadai/Medu vada)
+moong-dal-halwa,ASC299,Moong Dal Halwa,100,,Moong dal halwa
+murukku,OSR113,Murukku,100,,Rice murukku
+mushroom-champignon,ASC076,Mushroom,100,button mushroom,Mushroom sauce
+neer-dosa,BFP151,Neer Dosa,100,,Masala dosa paneer fillings
+onion,ASC091,Onion,100,,French onion soup
+onion-pakoda,ASC352,Onion Pakoda,100,onion bhaji,Onion pakora/pakoda (Pyaaz ke pakode)
+orange,ASC421,Orange,100,,Orange cake
+palak-paneer,ASC215,Palak Paneer,100,,Spinach paneer (Palak paneer)
+paneer-masala,BFP151,Paneer Masala,100,,Masala dosa paneer fillings
+papaya,ASC183,Papaya,100,,Raw papaya with coconut (Papaya thoran)
+pav-bhaji,OSR112,Pav Bhaji,100,,Pav bhaji
+peach,BFP358,Peach,100,,Peach melba ice cream
+peanut-shell-1x,ASC119,Peanut,100,peanuts,Peanut pulao 
+pear,BFP355,Pear,100,,Coffee pear alaska
+pepper,ASC172,Bell Pepper,100,capsicum,Potato capsicum (Shimla mirch aloo)
+phirni,ASC292,Phirni,100,,Phirni
+pineapple,ASC399,Pineapple,100,,Pineapple tart
+plum,ASC500,Plum,100,,Plum jam (Aloo bukhara jam)
+poha,BFP044,Poha,100,,Poha
+pomegranate,OSR089,Pomegranate,100,,Pomegranate raita (Anaar ka raita)
+potato,BFP289,Potato,100,,Potato nests
+potato-sweet,OSR034,Sweet Potato,100,,Sweet potato biscuit (Shakarkand ke biscuit)
+rasgulla,BFP392,Rasgulla,100,,Rasgulla
+raspberry,BFP363,Raspberry,100,,Raspberry bavarian cream
+rava-dosa,ASC147,Rava Dosa,100,,Semolina dosa (Suji/Rava dosa)
+sabudana-vada,ASC379,Sabudana Vada,100,,Peanut sago vada (Sabudana mungfali vada)
+samosa,ASC361,Samosa,100,,CHOOSE ONE (see list below)
+seekh-kebab,BFP199,Seekh Kebab,100,,CHOOSE ONE (see list below)
+strawberry,BFP348,Strawberry,100,,Strawberry ice cream
+tomato,ASC249,Tomato,100,,Tomato fish
+uttapam,BFP152,Uttapam,100,,Uttapam
+walnut,BFP517,Walnut,100,,Cherry and walnut cookies

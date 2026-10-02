@@ -117,12 +117,15 @@ def discover(source: Path) -> tuple[list[Sample], str]:
                         break
         return samples, "Food-101 style (images/ + meta/)"
 
-    # 2. split folders
+        # 2. split folders (Fruits-360 and some others use "Training" / "Test" instead of "train" / "test")
+    TRAIN_NAMES = ("train", "training")
+    TEST_NAMES = ("test", "testing")
     lower = {d.name.lower(): d for d in _class_dirs(source)}
-    if "train" in lower:
-        val_dir = next((lower[n] for n in VAL_NAMES if n in lower), None) or lower.get("test")
+    train_dir = next((lower[n] for n in TRAIN_NAMES if n in lower), None)
+    if train_dir is not None:
+        val_dir = next((lower[n] for n in VAL_NAMES if n in lower), None) or next((lower[n] for n in TEST_NAMES if n in lower), None)
         samples = []
-        for split, root in (("train", lower["train"]), ("val", val_dir)):
+        for split, root in (("train", train_dir), ("val", val_dir)):
             if root is None:
                 continue
             for class_dir in _class_dirs(root):

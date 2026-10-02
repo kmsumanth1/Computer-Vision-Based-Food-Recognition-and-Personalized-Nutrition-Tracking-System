@@ -1,0 +1,41 @@
+id,fdc_id,name,reference_weight_g,aliases,matched
+apricot,171697,Apricot,100,,"Apricots, raw"
+bean-pod,168574,Bean Pod,100,green beans,"Beans, fava, in pod, raw"
+beetroot,169145,Beetroot,100,beet,"Beets, raw"
+blueberry,173781,Blueberry,100,,SILK Blueberry soy yogurt
+cabbage-white,169975,Cabbage White,100,cabbage,"Cabbage, raw"
+caju-seed,170162,Cashew Nut,100,caju seed,"Nuts, cashew nuts, raw"
+carambola,171715,Carambola,100,star fruit,"Carambola, (starfruit), raw"
+carrot,170393,Carrot,100,,"Carrots, raw"
+cauliflower,169986,Cauliflower,100,,"Cauliflower, raw"
+cherimoya,173953,Cherimoya,100,custard apple,"Cherimoya, raw"
+cherry,167807,Cherry,100,,"Cherry juice, tart"
+cocos,171412,Coconut,100,coconut|cocos,"Oil, coconut"
+corn,169698,Corn,100,sweet corn,Cornstarch
+corn-husk,169698,Corn,100,,Cornstarch
+cucumber,169225,Cucumber,100,,"Cucumber, peeled, raw"
+dates,168191,Dates,100,,"Dates, medjool"
+eggplant,169228,Eggplant,100,brinjal,"Eggplant, raw"
+garlic-bulb,169230,Garlic,100,garlic,"Garlic, raw"
+ginger,169231,Ginger,100,,"Ginger root, raw"
+grape,171028,Grape,100,,"Oil, grapeseed"
+guava,173044,Guava,100,,"Guavas, common, raw"
+hazelnut,171427,Hazelnut,100,,"Oil, hazelnut"
+kiwi,168153,Kiwi,100,,"Kiwifruit, green, raw"
+lemon,167746,Lemon,100,,Lemons raw without peel
+mango,169910,Mango,100,,"Mangos, raw"
+onion,170000,Onion,100,,"Onions, raw"
+orange,167577,Orange,100,,"Sherbet, orange"
+papaya,169926,Papaya,100,,"Papayas, raw"
+peach,175020,Peach,100,,"Pie, peach"
+peanut-shell-1x,169585,Peanut,100,peanuts,"Candies, peanut bar"
+pear,169118,Pear,100,,"Pears, raw"
+pineapple,169665,Pineapple,100,,"Toppings, pineapple"
+plum,169949,Plum,100,,"Plums, raw"
+pomegranate,169134,Pomegranate,100,,"Pomegranates, raw"
+potato,168446,Potato,100,,Potato flour
+potato-sweet,169303,Sweet Potato,100,,"Sweet potato leaves, raw"
+raspberry,173778,Raspberry,100,,SILK Raspberry soy yogurt
+strawberry,168758,Strawberry,100,,"Toppings, strawberry"
+tomato,170461,Tomato,100,,Tomato powder
+walnut,171030,Walnut,100,,"Oil, walnut"

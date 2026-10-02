@@ -1,0 +1,41 @@
+id,name,calories,reference_weight_g,aliases,protein_g,carbs_g,fat_g,fiber_g,sugar_g,saturated_fat_g,sodium_mg,cholesterol_mg,kind
+apricot,Apricot,48,100,,1.4,11.12,0.39,2,9.24,0.027,1,0,food
+bean-pod,Bean Pod,88,100,green beans,7.92,17.63,0.73,7.5,9.21,0.118,25,0,food
+beetroot,Beetroot,43,100,beet,1.61,9.56,0.17,2.8,6.76,0.027,78,0,food
+blueberry,Blueberry,88,100,,2.35,17.06,1.18,0.6,12.35,0,15,0,food
+cabbage-white,Cabbage White,25,100,cabbage,1.28,5.8,0.1,2.5,3.2,0.034,18,0,food
+caju-seed,Cashew Nut,553,100,caju seed,18.22,30.19,43.85,3.3,5.91,7.783,12,0,food
+carambola,Carambola,31,100,star fruit,1.04,6.73,0.33,2.8,3.98,0.019,2,0,food
+carrot,Carrot,41,100,,0.93,9.58,0.24,2.8,4.74,0.032,69,0,food
+cauliflower,Cauliflower,25,100,,1.92,4.97,0.28,2,1.91,0.13,30,0,food
+cherimoya,Cherimoya,75,100,custard apple,1.57,17.71,0.68,3,12.87,0.233,7,0,food
+cherry,Cherry,59,100,,0.31,13.7,0.54,0,12.21,0,4,0,food
+cocos,Coconut,892,100,coconut|cocos,0,0,99.06,0,0,82.475,0,0,food
+corn,Corn,381,100,sweet corn,0.26,91.27,0.05,0.9,0,0.009,9,0,food
+corn-husk,Corn,381,100,,0.26,91.27,0.05,0.9,0,0.009,9,0,food
+cucumber,Cucumber,10,100,,0.59,2.16,0.16,0.7,1.38,0.078,2,0,food
+dates,Dates,277,100,,1.81,74.97,0.15,6.7,66.47,0,1,0,food
+eggplant,Eggplant,25,100,brinjal,0.98,5.88,0.18,3,3.53,0.034,2,0,food
+garlic-bulb,Garlic,149,100,garlic,6.36,33.06,0.5,2.1,1,0.089,17,0,food
+ginger,Ginger,80,100,,1.82,17.77,0.75,2,1.7,0.203,13,0,food
+grape,Grape,884,100,,0,0,100,0,0,9.6,0,0,food
+guava,Guava,68,100,,2.55,14.32,0.95,5.4,8.92,0.272,2,0,food
+hazelnut,Hazelnut,884,100,,0,0,100,0,0,7.4,0,0,food
+kiwi,Kiwi,61,100,,1.14,14.66,0.52,3,8.99,0.029,3,0,food
+lemon,Lemon,29,100,,1.1,9.32,0.3,2.8,2.5,0.039,2,0,food
+mango,Mango,60,100,,0.82,14.98,0.38,1.6,13.66,0.092,1,0,food
+onion,Onion,40,100,,1.1,9.34,0.1,1.7,4.24,0.042,4,0,food
+orange,Orange,144,100,,1.1,30.4,2,1.3,24.32,1.16,46,1,food
+papaya,Papaya,43,100,,0.47,10.82,0.26,1.7,7.82,0.081,8,0,food
+peach,Peach,224,100,,1.9,32.9,10,0.8,16.23,1.508,217,0,food
+peanut-shell-1x,Peanut,522,100,peanuts,15.5,47.4,33.7,4.1,42.22,4.678,156,0,food
+pear,Pear,57,100,,0.36,15.23,0.14,3.1,9.75,0.022,1,0,food
+pineapple,Pineapple,253,100,,0.1,66.4,0.1,0.4,21.01,0.018,42,0,food
+plum,Plum,46,100,,0.7,11.42,0.28,1.4,9.92,0.017,0,0,food
+pomegranate,Pomegranate,83,100,,1.67,18.7,1.17,4,13.67,0.12,3,0,food
+potato,Potato,357,100,,6.9,83.1,0.34,5.9,3.52,0.09,55,0,food
+potato-sweet,Sweet Potato,42,100,,2.49,8.82,0.51,5.3,0,0.111,6,0,food
+raspberry,Raspberry,88,100,,2.35,17.65,1.18,0.6,12.94,0,15,0,food
+strawberry,Strawberry,254,100,,0.2,66.3,0.1,0.7,27.38,0.005,21,0,food
+tomato,Tomato,302,100,,12.91,74.68,0.44,16.5,43.9,0.062,134,0,food
+walnut,Walnut,884,100,,0,0,100,0,0,9.1,0,0,food
