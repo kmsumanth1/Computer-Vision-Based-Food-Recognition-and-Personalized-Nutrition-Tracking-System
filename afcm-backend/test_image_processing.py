@@ -7,8 +7,8 @@ BASE_URL = "http://127.0.0.1:8000"
 
 # --- 1. Log in to get a token ---
 login_resp = requests.post(f"{BASE_URL}/auth/login", json={
-    "email": "mmohan0311@gmail.com",   # replace with a real registered user
-    "password": "KMsUMANTH"          # replace with that user's password
+    "email": "testuser@example.com",   # replace with a real registered user
+    "password": "TestPass123"          # replace with that user's password
 })
 
 if login_resp.status_code != 200:

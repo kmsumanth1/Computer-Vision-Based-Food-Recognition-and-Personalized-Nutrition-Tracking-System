@@ -34,5 +34,14 @@
     "val_images": 30,
     "prepared_at": "2026-10-02 10:07:55",
     "licence_note": "Check this dataset's licence before using a model trained on it in a product."
+  },
+  "chickenset": {
+    "source": "C:\\Users\\yaswa\\Downloads\\ML_NutriCheck",
+    "layout": "split folders (train/ and validation/)",
+    "classes": 1,
+    "train_images": 800,
+    "val_images": 100,
+    "prepared_at": "2026-10-02 11:02:47",
+    "licence_note": "Check this dataset's licence before using a model trained on it in a product."
   }
 }

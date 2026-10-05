@@ -72,6 +72,7 @@ def lookup_barcode(db: Session, barcode: str, client: httpx.Client | None = None
         return food
 
     settings = get_settings()
+    print("DEBUG barcode_provider is:", repr(settings.barcode_provider))  # TEMP DEBUG — remove after fixing
     if settings.barcode_provider != "openfoodfacts":
         raise _not_found()
 

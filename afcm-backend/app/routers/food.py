@@ -75,7 +75,18 @@ def calculate_weight(body: CalculateWeightRequest, _user: User = Depends(get_cur
         nutrition=food_service.nutrition_for(food, weight),
     )
 
-
 @router.post("/barcode", response_model=BarcodeResponse)
 def barcode(body: BarcodeRequest, _user: User = Depends(get_current_user), db: Session = Depends(get_db)):
-    return BarcodeResponse(food=food_service.to_food_item(lookup_barcode(db, body.barcode)))
+    start = time.perf_counter()
+    food = lookup_barcode(db, body.barcode)
+    elapsed_ms = (time.perf_counter() - start) * 1000
+
+    timing_file = Path("barcode_detection_times.csv")
+    is_new = not timing_file.exists()
+    with open(timing_file, "a", newline="") as f:
+        writer = csv.writer(f)
+        if is_new:
+            writer.writerow(["elapsed_ms"])
+        writer.writerow([f"{elapsed_ms:.4f}"])
+
+    return BarcodeResponse(food=food_service.to_food_item(food))

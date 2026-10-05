@@ -1,2 +1,2 @@
 id,name,calories,reference_weight_g,aliases,protein_g,carbs_g,fat_g,fiber_g,sugar_g,saturated_fat_g,sodium_mg,cholesterol_mg,kind
-chicken-cooked,Chicken Cooked,,100,,,,,,,,,,food
+chicken-cooked,Chicken breast (cooked),168.421,150,grilled chicken|chicken breast,21.81,0,9,0,0,0.816,36.7,61.55,food
