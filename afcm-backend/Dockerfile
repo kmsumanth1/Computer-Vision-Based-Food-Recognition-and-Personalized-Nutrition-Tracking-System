@@ -9,7 +9,17 @@ RUN pip install -r requirements.txt
 COPY alembic.ini ./
 COPY alembic ./alembic
 COPY app ./app
+COPY alembic.ini ./
+COPY alembic ./alembic
+COPY app ./app
 COPY scripts ./scripts
+COPY models ./models
+
+# Windows line endings and missing execute bit break the entrypoint script
+RUN sed -i 's/\r$//' scripts/entrypoint.sh && chmod +x scripts/entrypoint.sh
+
+RUN useradd --create-home --uid 10001 appuser && mkdir -p /app/models && chown -R appuser /app
+USER appuser
 
 # Your trained model goes in /app/models (mounted by docker-compose).
 RUN useradd --create-home --uid 10001 appuser && mkdir -p /app/models && chown -R appuser /app
