@@ -1,0 +1,20 @@
+{
+  "arch": "mobilenet_v3_large",
+  "input_size": 224,
+  "resize_size": 256,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "output": "logits",
+  "val_top1": 0.9462,
+  "val_top5": 0.9884,
+  "classes": 169,
+  "trained_at": "2026-10-04 15:27:39"
+}
